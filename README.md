@@ -88,3 +88,5 @@ After the equal sign:
 To run this agent simply use following command in CMD:
 uv run agent
 
+![Screenshot_1](https://github.com/user-attachments/assets/f315fe3d-5714-4642-ae70-c6b48ab88563)
+
