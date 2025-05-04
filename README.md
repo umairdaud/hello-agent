@@ -52,14 +52,14 @@ As we are using 3rd party LLM (Google Gemini) in this case we get API for AI Stu
 By searching openai gemini compatibility on google search bar or by using the following url (https://ai.google.dev/gemini-api/docs/openai) get the baseurl link from there.                                   
 
 ### 2 - Change the default openai client:
-As we are using external client so we need to change default openai client and provide the client details of LLM we use in this case we use google gemini api key and baseurl in AsyncOpenAI() these are then stored in external_client(variable). And used later on.
+As we are using external client so we need to change default openai client and provide the client details of LLM we wan to use. In this case we use google gemini api key and baseurl in AsyncOpenAI() these are then stored in external_client(variable). And used later on.
 
 ### 3 -  Turn off Tracing option:
 As we are using 3rd party LLM to connect with openai sdk, we first check if LLM provides the tracing option or not. If LLM provides a tracing option we need to check if it is supported by SDK or not.
 In this case we are turning the tracing option off by setting set_tracing_disabled(True). 
 
 ### 4 - OpenAIChatCompletionsModel (Model that agent will use to perform task):
-To run the agent we need to precisely guide what model to use as well are using Google Gemini but there are different models of so it so set a model variable and pass model as “gemini-2.0-flash” and change openai_client to external_client  in OpenAIChatCompletionsModel 
+To run the agent we need to guide what model to use. OpenAIChatCompletionsModel is designed for generating conversational responses for this project we are using Google Gemini which provides conversational api then pass the specific model to this that we are going to use as there are different models of it so we set a model variable and pass model as “gemini-2.0-flash” and change openai_client to external_client in OpenAIChatCompletionsModel 
 
 ### 5 - Importing Agent from Agents Module:
 Agent is designed to perform specific tasks
